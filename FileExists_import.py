@@ -1,7 +1,7 @@
 from os.path import isfile, isdir, join
 
-filename = "wycena.pdf"
-directory = "/Users/konradm/Downloads/"
+filename = "Charter.pdf"
+directory = "/Users/kmarszalek/Downloads/"
 
 if not isdir(directory):
     print("Error: directory " + directory + " does not exist!")
