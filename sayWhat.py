@@ -5,7 +5,3 @@ def say_what(word):
         return "WHAT WHAT WHAT???"
     return word + ", what?"
 
-
-print(say_what('Ewa i Darek'))
-print(say_what('Konrad'))
-
