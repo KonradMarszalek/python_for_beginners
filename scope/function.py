@@ -1,4 +1,4 @@
-i = 1  # Try without it
+i = 1 # Try withut i
 
 
 def foo():

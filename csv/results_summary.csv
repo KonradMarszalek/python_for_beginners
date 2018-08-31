@@ -1,0 +1,9 @@
+sampler_label,aggregate_report_count,average,aggregate_report_median,aggregate_report_90%_line,aggregate_report_95%_line,aggregate_report_99%_line,aggregate_report_min,aggregate_report_max,aggregate_report_error%,aggregate_report_rate,aggregate_report_bandwidth,aggregate_report_stddev
+login,21600,90,63,128,140,548,35,3696,0.00%,6.0,59.7,142.55
+search by assignee (issue nav),3600,932,829,970,1042,2104,579,18857,0.00%,1.0,8.3,1006.56
+search by date range (issue nav),3600,1071,967,1108,1195,2512,675,19769,0.00%,1.0,8.4,1049.32
+search by resolution (issue nav),3600,931,829,958,1034,2305,592,18731,0.00%,1.0,11.3,1019.23
+search by empty jql (issue nav),3600,936,836,970,1047,2112,578,19647,0.00%,1.0,8.3,1011.31
+search by created date (issue nav),3600,1046,942,1094,1164,2374,654,19922,0.00%,1.0,8.3,1044.60
+search by text (issue nav),3600,1552,1421,1613,1816,3224,1090,24265,0.00%,1.0,12.5,1225.87
+TOTAL,43200,584,653,1201,1431,1803,35,24265,0.00%,12.0,116.8,917.95

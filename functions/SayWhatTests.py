@@ -1,6 +1,6 @@
 import unittest
 
-from sayWhat import say_what
+from functions.sayWhat import say_what
 
 
 class TestSayWhat(unittest.TestCase):

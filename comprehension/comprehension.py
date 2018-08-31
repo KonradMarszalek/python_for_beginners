@@ -13,5 +13,18 @@
 
 # Example:
 
-even_squares = [x * x for x in range(10) if not x % 2]
+# even_squares = [
+#                 for x in range(0, 10)
+#                 if not x % 2]
+# print(even_squares)
+
+even_squares = []
+
+for x in range(0, 10):
+    if not x % 2:
+        even_squares.append(x * x)
 print(even_squares)
+
+
+
+

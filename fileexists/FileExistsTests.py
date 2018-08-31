@@ -1,6 +1,6 @@
 import unittest
 
-from FileExists_function import exists
+from fileexists.FileExists_function import exists
 
 
 class TestFileExists(unittest.TestCase):

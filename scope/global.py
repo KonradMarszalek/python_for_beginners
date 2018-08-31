@@ -5,7 +5,10 @@ def len(in_var):
     print('called my len() function')
     l = 0
     for i in in_var:
-        l += 1
+        if i == " ":
+            pass
+        else:
+            l += 1
     return l
 
 
@@ -15,3 +18,4 @@ def a_func(in_var):
 
 
 a_func('Hello, World!')
+
