@@ -1,13 +1,9 @@
 import csv
 import json
-from os import path
+from datetime import datetime
 
-base_path = path.dirname(__file__)
-csv_path = path.abspath(path.join(base_path, "results_summary.csv"))
-json_path = path.abspath(path.join(base_path, "results_summary.json"))
-
-csv_file = open(csv_path, 'r')
-json_file = open(json_path, 'w')
+csv_file = open("results_summary.csv", 'r')
+json_file = open("results_summary.json", 'w')
 
 fieldnames = (
     "sampler_label",
@@ -23,6 +19,12 @@ fieldnames = (
     "aggregate_report_rate",
     "aggregate_report_bandwidth",
     "aggregate_report_stddev")
-reader = csv.DictReader(csv_file, fieldnames)
-out = json.dumps([row for row in reader], )
-json_file.write(out)
+summary = [row for row in csv.DictReader(csv_file, fieldnames)]
+summary.remove(summary[0])  # Remove unnecessary headers info
+
+timestamp = datetime.utcnow().isoformat()
+for row in summary:
+    row['@timestamp'] = timestamp
+
+json_summary = [json.dumps(row) for row in summary]
+json_file.write('\n'.join(json_summary))
