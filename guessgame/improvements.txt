@@ -1,0 +1,8 @@
+
+Word guessed
+Which place is the letter?
+Display word with "-"
+Input validation
+Case sensitivity
+You have already guessed that letter. Please try again.
+Play again loop

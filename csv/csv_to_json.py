@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import csv
 import json
 from datetime import datetime
@@ -27,4 +29,4 @@ for row in summary:
     row['@timestamp'] = timestamp
 
 json_summary = [json.dumps(row) for row in summary]
-json_file.write('\n'.join(json_summary))
+json_file.write('\n'.join(json_summary) + '\n')
