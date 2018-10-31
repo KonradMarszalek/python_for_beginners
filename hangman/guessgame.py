@@ -32,7 +32,6 @@ def main():
         word_guessed = []
         for letter in chosen_word:
             word_guessed.append("-") # create an unguessed, blank version of the word
-        joined_word = None # joins the words in the list word_guessed
 
         HANGMAN = (
 """

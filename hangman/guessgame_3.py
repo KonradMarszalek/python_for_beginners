@@ -7,6 +7,7 @@ while attempts != 0 or word_guessed == True:
     player_guess = str(input("\nPlease select a letter between A-Z" + "\n> ")).lower()
     if player_guess in list(word):
             index = word.index(player_guess)
+            # [pos for pos, char in enumerate(s) if char == c]
             print(f"yes, {player_guess} is there")
             print(letters_to_guess)
             if "-" not in letters_to_guess:
