@@ -1,0 +1,12 @@
+Name,Score
+Ewa,44
+Konrad,33
+Darek,20
+
+
+
+
+
+
+
+
