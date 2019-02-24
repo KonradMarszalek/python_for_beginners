@@ -35,9 +35,9 @@ for idx in indexes:
 
 print("TOTAL: ", int(amount_sum * -1))
 
-
 months = ['-05-', '-06-', '-07-', '-08-', '-09-', '-10-', '-11-']
 
+total_monthly = []
 for month in months:
     month_sum = 0
     for idx in indexes:
@@ -48,6 +48,19 @@ for month in months:
                 #     print(titles[idx])
                 #     print(amounts[idx])
                 month_sum += float(amounts[idx].replace(',', '.'))
+    total_monthly.append(int(month_sum * -1))
     print(month, ": ", int(month_sum * -1))
 
+import plotly
+plotly.tools.set_credentials_file(username='konradm', api_key='eIbEK53q9rfjimLILMPp')
 
+
+import plotly.plotly as py
+import plotly.graph_objs as go
+
+data = [go.Bar(
+    x=months,
+    y=total_monthly
+)]
+
+py.iplot(data, filename='basic-bar')
