@@ -7,17 +7,29 @@ from django.shortcuts import render
 
 
 def hello(request):
-    images = []
     relative_static_dir = os.path.join(settings.STATIC_URL.strip("/"), "polls")
-    absolute_static_dir = Path(settings.BASE_DIR).joinpath(relative_static_dir)
+    image_directory = Path(settings.BASE_DIR).joinpath(relative_static_dir)
+
     pattern = "*.jpg"
 
-    for image in absolute_static_dir.glob(pattern):
-        images.append(image.name)
+    image_path = Path(image_directory)
 
-    random_image = random.choice(images)
+    images = image_path.glob(pattern)
 
-    return render(request, 'polls/index.html', context={'random_image': os.path.join("polls", random_image)})
+    images_names = []
+    for image in images:
+        images_names.append("polls/" + image.name)
+
+    random_image = random.choice(images_names)
+    return render(request, 'polls/index.html', context={"dowolne": random_image})
+
+
+
+
+
+
+
+
 
 
 
